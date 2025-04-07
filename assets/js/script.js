@@ -1,4 +1,5 @@
 'use strict';
+
 const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
@@ -26,8 +27,6 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
-
-
 const header = document.querySelector("[data-header]");
 
 window.addEventListener("scroll", function () {
@@ -38,13 +37,9 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-
-
 const sliders = document.querySelectorAll("[data-slider]");
 
 const initSlider = function (currentSlider) {
-
   const sliderContainer = currentSlider.querySelector("[data-slider-container]");
   const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
   const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
@@ -72,7 +67,6 @@ const initSlider = function (currentSlider) {
 
   sliderNextBtn.addEventListener("click", slideNext);
 
-
   const slidePrev = function () {
     if (currentSlidePos <= 0) {
       currentSlidePos = totalSlidableItems;
@@ -91,14 +85,10 @@ const initSlider = function (currentSlider) {
     sliderPrevBtn.style.display = 'none';
   }
 
-
-
   currentSlider.addEventListener("wheel", function (event) {
     if (event.shiftKey && event.deltaY > 0) slideNext();
     if (event.shiftKey && event.deltaY < 0) slidePrev();
   });
-
-
 
   window.addEventListener("resize", function () {
     totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue("--slider-items"));
@@ -106,11 +96,11 @@ const initSlider = function (currentSlider) {
 
     moveSliderItem();
   });
-
 }
 
-for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
-
+for (let i = 0, len = sliders.length; i < len; i++) {
+  initSlider(sliders[i]);
+}
 
 function showToast(message) {
   const toast = document.getElementById("toastMessage");
@@ -132,36 +122,43 @@ document.getElementById("copyEmail").addEventListener("click", function (e) {
 
 // debug hover
 document.querySelectorAll('.portfolio-card').forEach(card => {
-  card.addEventListener('mousedown', function() {
-      this.classList.remove('hover');
+  card.addEventListener('mousedown', function () {
+    this.classList.remove('hover');
   });
-  
-  card.addEventListener('mouseleave', function() {
-      this.classList.remove('hover');
+
+  card.addEventListener('mouseleave', function () {
+    this.classList.remove('hover');
   });
-  
-  card.addEventListener('mouseenter', function() {
-      this.classList.add('hover');
+
+  card.addEventListener('mouseenter', function () {
+    this.classList.add('hover');
   });
 });
 
-
-
 const backToTopBtn = document.getElementById('backToTop');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add('show');
-      backToTopBtn.classList.remove('hide');
-    } else {
-      backToTopBtn.classList.add('hide');
-      backToTopBtn.classList.remove('show');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add('show');
+    backToTopBtn.classList.remove('hide');
+  } else {
+    backToTopBtn.classList.add('hide');
+    backToTopBtn.classList.remove('show');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+// Fecha o menu mobile ao clicar em um link da navbar
+const navLinks = document.querySelectorAll('.navbar-link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (navbar.classList.contains('active')) {
+      navToggleBtn.click();
     }
   });
-
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-
-
+});
