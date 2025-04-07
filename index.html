@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>THALITA LIMA - Video Editor</title>
+  <meta name="title" content="THALITA LIMA - Video Editor">
+  <meta name="description" content="Isso é um portfólio de vídeo editor.">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+
+  <!--
+    - custom icon link
+  -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    .portfolio-card {
+      position: relative; 
+    }
+
+    .portfolio-card .layer-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .portfolio-card:hover .layer-link {
+      opacity: 1; 
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.png" width="170" height="40" alt="Pfolio home">
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+            <li>
+                <a href="#inicio" class="navbar-link">Início</a>
+            </li>
+            <li>
+                <a href="#service" class="navbar-link">Serviços</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="navbar-link">Portfólio</a>
+            </li>
+            <li>
+                <a href="https://wa.me/556293554206?text=Ol%C3%A1%20Thalita%2C%20acabei%20de%20visitar%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20servi%C3%A7os%20de%20edi%C3%A7%C3%A3o%20de%20v%C3%ADdeo.%20Poder%C3%ADamos%20negociar%3F" class="navbar-link" target="_blank">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="inicio" aria-label="inicio">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">THALITA LIMA</h1>
+
+            <p class="hero-subtitle">
+              Video Editor 
+            </p>
+
+            <div class="hero-banner">
+              <img src="./assets/images/hero-banner.jpg" width="800" height="800" alt="kane williams" class="w-100">
+            </div>
+
+            <p class="section-text">
+              Oi! Eu sou a Thalita, editora de vídeo. Gosto de transformar gravações em vídeos criativos e bem editados. 
+              Se precisar de ajuda com isso, é só chamar!
+            </p>
+
+            <a href="https://wa.me/556293554206?text=Ol%C3%A1%20Thalita%2C%20acabei%20de%20visitar%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20servi%C3%A7os%20de%20edi%C3%A7%C3%A3o%20de%20v%C3%ADdeo.%20Poder%C3%ADamos%20negociar%3F" 
+            class="btn has-before" target="_blank" rel="noopener noreferrer">
+              <span class="span">Contrate-me</span>
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
+        </div>
+        <div id="service"></div>
+      </section>
+
+      <!-- 
+        - #SERVICE
+      -->
+    
+      <section class="service" aria-labelledby="service-label">
+
+        <div class="container">
+      
+          <div class="title-wrapper">
+      
+            <div>
+              <p class="section-subtitle">
+                Serviços que presto
+              </p>
+      
+          
+      
+              <h2 class="h2 section-title" id="service-label">Serviços</h2>
+            </div>
+      
+
+            <p class="section-text">
+              Gosto de criar edições que transmitam sentimento, com ritmo envolvente, 
+              identidade visual marcante e atenção aos detalhes. 
+              Busco sempre entregar um resultado que reflita a essência de cada projeto.
+            </p>
+
+          </div>
+
+          <div class="slider" data-slider>
+
+            <ul class="slider-container service-list" data-slider-container>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="film-outline"></ion-icon>
+                  </div>
+                  <h3 class="h3 card-title">Edição Elaborada</h3>
+                  <p class="card-text">
+                    Realizo edições detalhadas com cortes precisos, ajustes de cor e ritmo para entregar um resultado de alto nível.
+                  </p>
+                  <span class="text-lg card-number">01</span>
+                  <a href="#" class="layer-link" aria-label="Mais sobre edição elaborada"></a>
+                </div>
+              </li>
+              
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="color-palette-outline"></ion-icon>
+                  </div>
+                  <h3 class="h3 card-title">Estilo Personalizado</h3>
+                  <p class="card-text">
+                    Adapto a edição ao seu estilo e identidade visual, garantindo que o vídeo represente você ou sua marca.
+                  </p>
+                  <span class="text-lg card-number">02</span>
+                  <a href="#" class="layer-link" aria-label="Mais sobre estilo personalizado"></a>
+                </div>
+              </li>
+              
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="musical-notes-outline"></ion-icon>
+                  </div>
+                  <h3 class="h3 card-title">Sincronização Musical</h3>
+                  <p class="card-text">
+                    Alinho cortes e efeitos com trilhas sonoras que valorizam a emoção e a narrativa do seu vídeo.
+                  </p>
+                  <span class="text-lg card-number">03</span>
+                  <a href="#" class="layer-link" aria-label="Mais sobre sincronização musical"></a>
+                </div>
+              </li>
+              
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="sparkles-outline"></ion-icon>
+                  </div>
+                  <h3 class="h3 card-title">Efeitos Visuais</h3>
+                  <p class="card-text">
+                    Utilizo efeitos visuais com bom gosto e criatividade para tornar seu vídeo mais atrativo e moderno.
+                  </p>
+                  <span class="text-lg card-number">04</span>
+                  <a href="#" class="layer-link" aria-label="Mais sobre efeitos visuais"></a>
+                </div>
+              </li>
+              
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                  </div>
+                  <h3 class="h3 card-title">Legendas Profissionais</h3>
+                  <p class="card-text">
+                    Adiciono legendas com precisão, facilitando a compreensão do conteúdo e ampliando seu alcance.
+                  </p>
+                  <span class="text-lg card-number">05</span>
+                  <a href="#" class="layer-link" aria-label="Mais sobre legendas profissionais"></a>
+                </div>
+              </li>
+
+            </ul>
+
+            <div class="slider-controls">
+              <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
+                <div class="line"></div>
+                <div class="arrow"></div>
+              </button>
+              <div id="portfolio"></div>
+              <button class="slider-control next" data-slider-next aria-label="Slide to next item">
+                <div class="line"></div>
+                <div class="arrow"></div>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        - #PORTFOLIO
+      -->
+
+      <section class="portfolio" aria-labelledby="portfolio-label">
+      
+        <div class="title-wrapper container">
+      
+          <div>
+            <p class="section-subtitle" id="portfolio-label">Outros Trabalhos</p>
+      
+            <h2 class="h2 section-title">Portfolio</h2>
+          </div>
+      
+          <p class="section-text">
+            Aqui estão alguns dos trabalhos que já realizei. Sinta-se à vontade para explorar e ver como posso ajudar a dar vida às suas ideias através da edição de vídeo.
+          </p>
+      
+        </div>
+      
+
+        <div class="slider" data-slider>
+
+          <ul class="slider-container" data-slider-container>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+                <img src="./assets/images/portfolio-1.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                
+                <a href="https://www.instagram.com/reel/C5Es8_8LAWo/?igsh=eGtkc2c1bmtxaHpq" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
+                  Ver Vídeo
+                </a>
+              </div>
+            </li>
+            
+            
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+                <img src="./assets/images/portfolio-2.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                
+                <a href="https://www.instagram.com/reel/DFbKQ1ayuE9/" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
+                  Ver Vídeo
+                </a>
+              </div>
+            </li>
+    
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+                <img src="./assets/images/portfolio-3.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                
+                <a href="https://www.instagram.com/reel/DFGu7gQPIgE/?igsh=ZjhnbW5zM3VlemY3 " class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
+                  Ver Vídeo
+                </a>
+              </div>
+            </li>
+            
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+                <img src="./assets/images/portfolio-4.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                
+                <a href="https://www.instagram.com/reel/DFP0famPXCT/?igsh=M3pvNGR5djB5NGx2 " class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
+                  Ver Vídeo
+                </a>
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+                <img src="./assets/images/portfolio-5.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                
+                <a href="https://www.instagram.com/reel/DIBa6D4RhyV/?igsh=cHlyZjRjYXNnamx2" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
+                  Ver Vídeo
+                </a>
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+                <img src="./assets/images/portfolio-6.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                
+                <a href="https://www.instagram.com/reel/DHUGMOpxpSp/?igsh=MThkdGNka2x1eXA1bA==" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
+                  Ver Vídeo
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+          <div class="slider-controls">
+            <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+
+            <button class="slider-control next" data-slider-next aria-label="Slide to next item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+          </div>
+
+        </div>
+
+      </section>
+
+    </article>
+  </main>
+
+<!-- 
+    - #FOOTER
+-->
+
+<footer class="footer">
+  <div class="container">
+      <div class="footer-contact" style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <div>
+              <p class="h4 footer-list-title">Entre em contato</p>
+              <ul class="social-list" style="list-style: none; padding: 0; display: flex; gap: 10px;">
+                  <li>
+                      <a href="https://wa.me/556293554206?text=Ol%C3%A1%20Thalita%2C%20acabei%20de%20visitar%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20servi%C3%A7os%20de%20edi%C3%A7%C3%A3o%20de%20v%C3%ADdeo.%20Poder%C3%ADamos%20negociar%3F" class="social-link" target="_blank">
+                          <ion-icon name="logo-whatsapp"></ion-icon>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.instagram.com/thalitaa_liman/" class="social-link" target="_blank">
+                          <ion-icon name="logo-instagram"></ion-icon>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" id="copyEmail" class="social-link">
+                          <ion-icon name="mail-outline"></ion-icon>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+
+
+
+      <p style="text-align: center; margin-top: 20px;">© 2025 Thalita Lima. Todos os direitos reservados.</p>
+  </div>
+</footer>
+  
+  <div id="toastMessage"></div>
+
+  <button id="backToTop" class="hide">
+    <i class='bx bx-up-arrow-alt'></i>
+  </button>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
