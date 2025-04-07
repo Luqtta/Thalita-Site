@@ -90,6 +90,28 @@ const initSlider = function (currentSlider) {
     if (event.shiftKey && event.deltaY < 0) slidePrev();
   });
 
+  // Touch events for swipe functionality
+  let startX = 0;
+  let endX = 0;
+
+  currentSlider.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  currentSlider.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  currentSlider.addEventListener("touchend", () => {
+    if (startX > endX + 50) {
+      // Swipe left
+      slideNext();
+    } else if (startX < endX - 50) {
+      // Swipe right
+      slidePrev();
+    }
+  });
+
   window.addEventListener("resize", function () {
     totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue("--slider-items"));
     totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
@@ -150,7 +172,6 @@ window.addEventListener('scroll', () => {
 backToTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
 
 // Fecha o menu mobile ao clicar em um link da navbar
 const navLinks = document.querySelectorAll('.navbar-link');
