@@ -59,11 +59,23 @@
 
 
 
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Isso ajuda a distribuir o conteúdo uniformemente */
+  height: 300px; /* Defina uma altura fixa para todos os cards */
+  padding: 20px; /* Adicione um padding para o conteúdo */
+  border: 1px solid #ccc; /* Adicione uma borda para visualização */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #fff; /* Cor de fundo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para efeito de profundidade */
+}
 
-
-
-
-
+.swiper-slide {
+  display: flex; /* Isso garante que os slides se comportem como flex containers */
+  justify-content: center; /* Centraliza os cards */
+  align-items: center; /* Alinha verticalmente os cards */
+}
 
 
 /*-----------------------------------*\
@@ -575,18 +587,77 @@ body.nav-active { overflow: hidden; }
   #SERVICE
 \*-----------------------------------*/
 
-.service-card {
-  position: relative;
-  background-color: #ffffff; /* 🎨 Mudei de branco para um tom cinza-azulado elegante */
-  height: 100%;
-  padding: 60px 40px 40px;
-  display: flex; /* 🧱 Usei Flexbox para alinhar os elementos verticalmente */
-  flex-direction: column;
-  justify-content: space-between; /* 📐 Distribui espaço entre topo e base */
-  transition: var(--transition-2);
-  border-radius: 12px; /* 🔵 Cantos arredondados para deixar mais moderno */
+/* Remove as setas padrão */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
 }
 
+/* Configuração base das setas */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+
+.swiper-button-prev {
+  left: -50px;
+}
+
+.swiper-button-next {
+  right: -50px;
+}
+
+
+.swiper-button-next .arrow,
+.swiper-button-prev .arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 20px;  
+  height: 20px;
+  border: solid #000; 
+}
+
+
+.swiper-button-prev .arrow {
+  border-width: 0 0 4px 4px; 
+}
+
+.swiper-button-next .arrow {
+  border-width: 4px 4px 0 0; 
+}
+
+
+
+
+.card__content {
+  display: flex; /* Torna o contêiner um flex container */
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se não houver espaço */
+  gap: 20px; /* Espaçamento entre os cartões */
+}
+
+.service-card {
+  position: relative;
+  background-color: #f0f4f8; /* Tom cinza-azulado elegante */
+  padding: 60px 40px 40px;
+  display: flex; /* Alinha os elementos verticalmente */
+  flex-direction: column;
+  justify-content: space-between; /* Distribui espaço entre topo e base */
+  transition: var(--transition-2);
+  border-radius: 12px; /* Cantos arredondados */
+  flex: 1 1 300px; /* Faz com que todos os cartões ocupem o mesmo espaço e sejam responsivos */
+  min-height: 550px; /* Define uma altura mínima para os cartões */
+
+}
 
 .service-card .card-icon ion-icon {
   color: var(--content-color, var(--raisin-black));
