@@ -48,6 +48,9 @@ const initSlider = function (currentSlider) {
   let totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
 
   let currentSlidePos = 0;
+  let startX = 0;
+  let currentTranslateX = 0;
+  let isDragging = false;
 
   const moveSliderItem = function () {
     sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
@@ -85,32 +88,44 @@ const initSlider = function (currentSlider) {
     sliderPrevBtn.style.display = 'none';
   }
 
-  currentSlider.addEventListener("wheel", function (event) {
-    if (event.shiftKey && event.deltaY > 0) slideNext();
-    if (event.shiftKey && event.deltaY < 0) slidePrev();
-  });
+  // Touch and mouse events for swipe functionality
+  const startDrag = (e) => {
+    isDragging = true;
+    startX = e.touches ? e.touches[0].clientX : e.clientX;
+    currentTranslateX = sliderContainer.offsetLeft;
+  };
 
-  // Touch events for swipe functionality
-  let startX = 0;
-  let endX = 0;
+  const dragSlider = (e) => {
+    if (!isDragging) return;
+    const currentX = e.touches ? e.touches[0].clientX : e.clientX;
+    const diffX = currentX - startX;
+    sliderContainer.style.transform = `translateX(${currentTranslateX + diffX}px)`;
+  };
 
-  currentSlider.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
+  const endDrag = (e) => {
+    if (!isDragging) return;
+    isDragging = false;
 
-  currentSlider.addEventListener("touchmove", (e) => {
-    endX = e.touches[0].clientX;
-  });
+    const currentX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+    const diffX = currentX - startX;
 
-  currentSlider.addEventListener("touchend", () => {
-    if (startX > endX + 50) {
-      // Swipe left
-      slideNext();
-    } else if (startX < endX - 50) {
-      // Swipe right
-      slidePrev();
+    if (diffX < -50) {
+      slideNext(); // Swipe left
+    } else if (diffX > 50) {
+      slidePrev(); // Swipe right
+    } else {
+      moveSliderItem(); // Return to original position
     }
-  });
+  };
+
+  sliderContainer.addEventListener("touchstart", startDrag);
+  sliderContainer.addEventListener("touchmove", dragSlider);
+  sliderContainer.addEventListener("touchend", endDrag);
+
+  sliderContainer.addEventListener("mousedown", startDrag);
+  sliderContainer.addEventListener("mousemove", dragSlider);
+  sliderContainer.addEventListener("mouseup", endDrag);
+  sliderContainer.addEventListener("mouseleave", endDrag);
 
   window.addEventListener("resize", function () {
     totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue("--slider-items"));
