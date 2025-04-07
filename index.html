@@ -40,6 +40,12 @@
   -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+
+  <!-- 
+    - swiper css link
+  -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <style>
     .portfolio-card {
       position: relative; 
@@ -157,217 +163,176 @@
       -->
     
       <section class="service" aria-labelledby="service-label">
-
         <div class="container">
-      
-          <div class="title-wrapper">
-      
-            <div>
-              <p class="section-subtitle">
-                Serviços que presto
-              </p>
-      
-          
-      
-              <h2 class="h2 section-title" id="service-label">Serviços</h2>
+            <div class="title-wrapper">
+                <div>
+                    <p class="section-subtitle">Serviços que presto</p>
+                    <h2 class="h2 section-title" id="service-label">Serviços</h2>
+                </div>
+                <p class="section-text">
+                    Gosto de criar edições que transmitam sentimento, com ritmo envolvente,
+                    identidade visual marcante e atenção aos detalhes.
+                    Busco sempre entregar um resultado que reflita a essência de cada projeto.
+                </p>
             </div>
-      
-
-            <p class="section-text">
-              Gosto de criar edições que transmitam sentimento, com ritmo envolvente, 
-              identidade visual marcante e atenção aos detalhes. 
-              Busco sempre entregar um resultado que reflita a essência de cada projeto.
-            </p>
-
-          </div>
-
-          <div class="slider" data-slider>
-
-            <ul class="slider-container service-list" data-slider-container>
-
-              <li class="slider-item" data-slider-item>
-                <div class="service-card">
-                  <div class="card-icon">
-                    <ion-icon name="film-outline"></ion-icon>
-                  </div>
-                  <h3 class="h3 card-title">Edição Elaborada</h3>
-                  <p class="card-text">
-                    Realizo edições detalhadas com cortes precisos, ajustes de cor e ritmo para entregar um resultado de alto nível.
-                  </p>
-                  <span class="text-lg card-number">01</span>
+    
+            <!-- Swiper -->
+            <div class="swiper card__content">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <ion-icon name="film-outline"></ion-icon>
+                            </div>
+                            <h3 class="h3 card-title">Edição Elaborada</h3>
+                            <p class="card-text">
+                                Realizo edições detalhadas com cortes precisos, ajustes de cor e ritmo para entregar um resultado de alto nível.
+                            </p>
+                            <span class="text-lg card-number">01</span>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <ion-icon name="color-palette-outline"></ion-icon>
+                            </div>
+                            <h3 class="h3 card-title">Estilo Personalizado</h3>
+                            <p class="card-text">
+                                Adapto a edição ao seu estilo e identidade visual, garantindo que o vídeo represente você ou sua marca.
+                            </p>
+                            <span class="text-lg card-number">02</span>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <ion-icon name="musical-notes-outline"></ion-icon>
+                            </div>
+                            <h3 class="h3 card-title">Sincronização Musical</h3>
+                            <p class="card-text">
+                                Alinho cortes e efeitos com trilhas sonoras que valorizam a emoção e a narrativa do seu vídeo.
+                            </p>
+                            <span class="text-lg card-number">03</span>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <ion-icon name="sparkles-outline"></ion-icon>
+                            </div>
+                            <h3 class="h3 card-title">Efeitos Visuais</h3>
+                            <p class="card-text">
+                                Utilizo efeitos visuais com bom gosto e criatividade para tornar seu vídeo mais atrativo e moderno.
+                            </p>
+                            <span class="text-lg card-number">04</span>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                            </div>
+                            <h3 class="h3 card-title">Legendas Profissionais</h3>
+                            <p class="card-text">
+                                Adiciono legendas com precisão, facilitando a compreensão do conteúdo e ampliando seu alcance.
+                            </p>
+                            <span class="text-lg card-number">05</span>
+                        </div>
+                    </div>
                 </div>
-              </li>
-              
-              <li class="slider-item" data-slider-item>
-                <div class="service-card">
-                  <div class="card-icon">
-                    <ion-icon name="color-palette-outline"></ion-icon>
-                  </div>
-                  <h3 class="h3 card-title">Estilo Personalizado</h3>
-                  <p class="card-text">
-                    Adapto a edição ao seu estilo e identidade visual, garantindo que o vídeo represente você ou sua marca.
-                  </p>
-                  <span class="text-lg card-number">02</span>
-                </div>
-              </li>
-              
-              <li class="slider-item" data-slider-item>
-                <div class="service-card">
-                  <div class="card-icon">
-                    <ion-icon name="musical-notes-outline"></ion-icon>
-                  </div>
-                  <h3 class="h3 card-title">Sincronização Musical</h3>
-                  <p class="card-text">
-                    Alinho cortes e efeitos com trilhas sonoras que valorizam a emoção e a narrativa do seu vídeo.
-                  </p>
-                  <span class="text-lg card-number">03</span>
-                </div>
-              </li>
-              
-              <li class="slider-item" data-slider-item>
-                <div class="service-card">
-                  <div class="card-icon">
-                    <ion-icon name="sparkles-outline"></ion-icon>
-                  </div>
-                  <h3 class="h3 card-title">Efeitos Visuais</h3>
-                  <p class="card-text">
-                    Utilizo efeitos visuais com bom gosto e criatividade para tornar seu vídeo mais atrativo e moderno.
-                  </p>
-                  <span class="text-lg card-number">04</span>
-                </div>
-              </li>
-              
-              <li class="slider-item" data-slider-item>
-                <div class="service-card">
-                  <div class="card-icon">
-                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-                  </div>
-                  <h3 class="h3 card-title">Legendas Profissionais</h3>
-                  <p class="card-text">
-                    Adiciono legendas com precisão, facilitando a compreensão do conteúdo e ampliando seu alcance.
-                  </p>
-                  <span class="text-lg card-number">05</span>
-                </div>
-              </li>
+    
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"><div class="arrow"></div></div>
+                <div class="swiper-button-next"><div class="arrow"></div></div>
 
-            </ul>
-
-            <div class="slider-controls">
-              <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
-                <div class="line"></div>
-                <div class="arrow"></div>
-              </button>
-              <div id="portfolio"></div>
-              <button class="slider-control next" data-slider-next aria-label="Slide to next item">
-                <div class="line"></div>
-                <div class="arrow"></div>
-              </button>
             </div>
-
-          </div>
         </div>
-      </section>
+    </section>
 
       <!-- 
         - #PORTFOLIO
       -->
 
       <section class="portfolio" aria-labelledby="portfolio-label">
-      
+  
         <div class="title-wrapper container">
-      
           <div>
             <p class="section-subtitle" id="portfolio-label">Outros Trabalhos</p>
-      
             <h2 class="h2 section-title">Portfolio</h2>
           </div>
-      
           <p class="section-text">
             Aqui estão alguns dos trabalhos que já realizei. Sinta-se à vontade para explorar e ver como posso ajudar a dar vida às suas ideias através da edição de vídeo.
           </p>
-      
         </div>
       
-
-        <div class="slider" data-slider>
-
-          <ul class="slider-container" data-slider-container>
-
-            <li class="slider-item">
+        <!-- Swiper -->
+        <div class="swiper portfolio-slider">
+          <div class="swiper-wrapper">
+      
+            <div class="swiper-slide">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
                 <img src="./assets/images/portfolio-1.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                
                 <a href="https://www.instagram.com/reel/C5Es8_8LAWo/?igsh=eGtkc2c1bmtxaHpq" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
                   Ver Vídeo
                 </a>
               </div>
-            </li>
-            
-            
-            <li class="slider-item">
+            </div>
+      
+            <div class="swiper-slide">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
                 <img src="./assets/images/portfolio-2.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                
                 <a href="https://www.instagram.com/reel/DFbKQ1ayuE9/" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
                   Ver Vídeo
                 </a>
               </div>
-            </li>
-    
-            <li class="slider-item">
+            </div>
+      
+            <div class="swiper-slide">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
                 <img src="./assets/images/portfolio-3.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                
-                <a href="https://www.instagram.com/reel/DFGu7gQPIgE/?igsh=ZjhnbW5zM3VlemY3 " class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
+                <a href="https://www.instagram.com/reel/DFGu7gQPIgE/?igsh=ZjhnbW5zM3VlemY3" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
                   Ver Vídeo
                 </a>
               </div>
-            </li>
-            
-            <li class="slider-item">
+            </div>
+      
+            <div class="swiper-slide">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
                 <img src="./assets/images/portfolio-4.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                
-                <a href="https://www.instagram.com/reel/DFP0famPXCT/?igsh=M3pvNGR5djB5NGx2 " class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
+                <a href="https://www.instagram.com/reel/DFP0famPXCT/?igsh=M3pvNGR5djB5NGx2" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
                   Ver Vídeo
                 </a>
               </div>
-            </li>
-
-            <li class="slider-item">
+            </div>
+      
+            <div class="swiper-slide">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
                 <img src="./assets/images/portfolio-5.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                
                 <a href="https://www.instagram.com/reel/DIBa6D4RhyV/?igsh=cHlyZjRjYXNnamx2" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
                   Ver Vídeo
                 </a>
               </div>
-            </li>
-
-            <li class="slider-item">
+            </div>
+      
+            <div class="swiper-slide">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
                 <img src="./assets/images/portfolio-6.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                
                 <a href="https://www.instagram.com/reel/DHUGMOpxpSp/?igsh=MThkdGNka2x1eXA1bA==" class="layer-link" target="_blank" aria-label="Ver vídeo no Instagram">
                   Ver Vídeo
                 </a>
               </div>
-            </li>
-
-          </ul>
-
-          <div class="slider-controls">
-            <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
-              <div class="line"></div>
-              <div class="arrow"></div>
-            </button>
-
-            <button class="slider-control next" data-slider-next aria-label="Slide to next item">
-              <div class="line"></div>
-              <div class="arrow"></div>
-            </button>
+            </div>
+      
           </div>
-
+      
+          <!-- Adicionando a navegação do Swiper -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"><div class="arrow"></div></div>
+          <div class="swiper-button-next"><div class="arrow"></div></div>
         </div>
 
       </section>
@@ -418,6 +383,54 @@
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Inicialização do Swiper
+    let swiperCards = new Swiper(".card__content", {
+      loop: true,
+      spaceBetween: 32,
+      grabCursor: true,
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+      },
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+          600: {
+              slidesPerView: 2,
+          },
+          968: {
+              slidesPerView: 3,
+          },
+      },
+    });
+    // Inicialização do Swiper para o portfólio
+    let portfolioSwiper = new Swiper(".portfolio-slider", {
+      loop: true,
+      spaceBetween: 32,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        600: {
+          slidesPerView: 2,
+        },
+        968: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
 </body>
 </html>
