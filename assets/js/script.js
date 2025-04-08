@@ -157,6 +157,20 @@ document.querySelectorAll('.portfolio-card').forEach(card => {
   });
 });
 
+document.querySelectorAll('.layer-link').forEach(link => {
+  link.addEventListener('touchstart', function () {
+    const card = this.closest('.portfolio-card');
+    if (card) {
+      card.classList.remove('hover');
+    }
+
+    this.blur(); 
+  });
+});
+
+
+
+
 const backToTopBtn = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
@@ -183,3 +197,4 @@ navLinks.forEach(link => {
     }
   });
 });
+
