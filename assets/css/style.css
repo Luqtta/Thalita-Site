@@ -59,6 +59,57 @@
 
 
 
+
+
+
+/* Remove estilo padrão do swiper */
+.swiper-button-prev,
+.swiper-button-next {
+  all: unset;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Linha branca */
+.custom-arrow::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 5px;
+  width: 30px;
+  height: 1px;
+  background-color: white;
+}
+
+/* Seta estilo diagonal */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-color: white;
+  transform: rotate(45deg);
+}
+
+/* Esquerda */
+.swiper-button-prev::after {
+  left: 0;
+  top: 10px;
+  border-width: 0 0 2px 2px;
+}
+
+/* Direita */
+.swiper-button-next::after {
+  right: 0;
+  top: 10px;
+  border-width: 2px 2px 0 0;
+}
+
+
 .service-card {
   display: flex;
   flex-direction: column;
