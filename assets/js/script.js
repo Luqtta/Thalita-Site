@@ -142,35 +142,6 @@ document.getElementById("copyEmail").addEventListener("click", function (e) {
   });
 });
 
-// debug hover
-document.querySelectorAll('.portfolio-card').forEach(card => {
-  card.addEventListener('mousedown', function () {
-    this.classList.remove('hover');
-  });
-
-  card.addEventListener('mouseleave', function () {
-    this.classList.remove('hover');
-  });
-
-  card.addEventListener('mouseenter', function () {
-    this.classList.add('hover');
-  });
-});
-
-document.querySelectorAll('.layer-link').forEach(link => {
-  link.addEventListener('touchstart', function () {
-    const card = this.closest('.portfolio-card');
-    if (card) {
-      card.classList.remove('hover');
-    }
-
-    this.blur(); 
-  });
-});
-
-
-
-
 const backToTopBtn = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
@@ -197,4 +168,3 @@ navLinks.forEach(link => {
     }
   });
 });
-
